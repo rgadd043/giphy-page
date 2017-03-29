@@ -32,7 +32,7 @@ $("#add-athlete").on("click", function(event) {
 function displayGIFs() {
 
     var athletePlaceholder = $(this).attr("data-athlete");
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + athletePlaceholder + "&api_key=dc6zaTOxFJmzC&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + athletePlaceholder + "&api_key=dc6zaTOxFJmzC&limit=10";
 
     $.ajax({
           url: queryURL,
@@ -69,7 +69,10 @@ function displayGIFs() {
                     // Prepending div above to existing html placeholder div
                     $("#athleteGifs").prepend(gifDiv);
 
-                    $(".gifImage").on("click", function() {
+                };
+
+            };
+                $(".gifImage").on("click", function() {
                         var state = $(this).attr("data-state");
                             if (state === "still"){
                                 $(this).attr("src", $(this).attr("data-animate"));
@@ -83,9 +86,6 @@ function displayGIFs() {
                             }
 
                     });
-
-                };
-            };
     });
 };
 
