@@ -1,0 +1,12 @@
+.newGif {
+	display: inline-block;
+	padding: 10px;
+}
+#athleteButtons {
+	margin-top: 15px;
+	padding: 10px;
+}
+#athleteForm {
+	margin-left: 15px;
+	margin-top: 15px;
+}
